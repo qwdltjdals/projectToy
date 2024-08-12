@@ -11,6 +11,7 @@ import { useRecoilState, useSetRecoilState } from 'recoil';
 import { refreshTodolistAtom, todolistAtom } from '../../atoms/todolistAtoms';
 import { getTodoAllApi, getTodoCountsApi } from '../../apis/todoApis/getTodoApi';
 import { useEffect } from 'react';
+import Note from '../Note/Note';
 function Dashboard(props) {
     const setTodolistAll = useSetRecoilState(todolistAtom); // todolistAtom을 받아옴
     const [refresh, setRefresh] = useRecoilState(refreshTodolistAtom)

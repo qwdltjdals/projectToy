@@ -19,8 +19,8 @@ function RegisterModal({ containerRef }) {
             setAnimation("registerModalContentOpen");
             setOpen(false);
         }, 400);
-
     }
+    
     return (
         <ReactModal
             style={{

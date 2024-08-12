@@ -17,5 +17,5 @@ function RegisterTodoButton(props) {
         </button>
     );
 }
- // spqn = 인라인 중에 div처럼 아무 솏성이 없는 것
+ // span = 인라인 중에 div처럼 아무 솏성이 없는 것
 export default RegisterTodoButton;
