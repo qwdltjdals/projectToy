@@ -16,9 +16,9 @@ function MainContainer({ children }) {
 
     return (
         <div css={s.container} ref={containerRef} >
-            {modalElement}
+            {modalElement} {/* 어디서나 todo추가할 수 있게 함*/}
             {children}
         </div>
     );
 }
-export default MainContainer;
+export default MainContainer; 

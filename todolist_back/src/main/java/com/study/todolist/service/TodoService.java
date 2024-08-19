@@ -1,6 +1,7 @@
 package com.study.todolist.service;
 
 import com.study.todolist.dto.request.todo.ReqAddTodoDto;
+import com.study.todolist.dto.request.todo.ReqModifyTodoDto;
 import com.study.todolist.dto.response.todo.RespTodoCountsDto;
 import com.study.todolist.dto.response.todo.RespTodoDto;
 import com.study.todolist.entity.Todo;
@@ -36,4 +37,11 @@ public class TodoService {
         return todoMapper.getTodoCounts().toDto();
     }
 
+    public int changeStatus(int todoId) {
+        return todoMapper.changeStatus(todoId);
+    }
+
+    public int modifyTodo(ReqModifyTodoDto dto) {
+        return todoMapper.modifyTodoByTodoId(dto.toEntity()); // dto 가 entity로 바뀌어야함
+    }
 }

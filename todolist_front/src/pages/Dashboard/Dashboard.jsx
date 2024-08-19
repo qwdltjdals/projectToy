@@ -12,11 +12,12 @@ import { refreshTodolistAtom, todolistAtom } from '../../atoms/todolistAtoms';
 import { getTodoAllApi, getTodoCountsApi } from '../../apis/todoApis/getTodoApi';
 import { useEffect } from 'react';
 import Note from '../Note/Note';
+import NotFound from '../NotFound/NotFound';
 function Dashboard(props) {
     const setTodolistAll = useSetRecoilState(todolistAtom); // todolistAtom을 받아옴
     const [refresh, setRefresh] = useRecoilState(refreshTodolistAtom)
 
-    const requestTodolist = async () => {
+    const requestTodolist = async () => { // 리스트 다시 불러오는거 - refresh 가 동작하면
         const todolist = await getTodoAllApi();
         const counts = await getTodoCountsApi();
         setTodolistAll({

@@ -9,6 +9,7 @@ import TodoAllPage from "./pages/TodoAll/TodoAllPage";
 import Note from "./pages/Note/Note";
 
 function App() {
+    
     return (
         <>
             <Global styles={reset} />
